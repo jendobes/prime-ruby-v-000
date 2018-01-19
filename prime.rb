@@ -18,5 +18,6 @@ prime?(-1)
 
 def prime?(number)
   range = (2..number-1).to_a
-  range.all? {|x| }
+  range2 = (-number+1..-2).to_a
+  range.all? {|x| number % x }
 end
