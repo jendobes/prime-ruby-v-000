@@ -19,5 +19,9 @@ prime?(-1)
 def prime?(number)
   range = (2..number-1).to_a
   range2 = (-number+1..-2).to_a
-  range.all? {|x| number % x }
+  if range.all? {|x| number % x != 0} && range2.all? {|x| number % x != 0}
+    return true
+  else
+    return false
+  end
 end
