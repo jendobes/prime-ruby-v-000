@@ -15,12 +15,13 @@ end
 
 prime?(-1)
 
-range = (2..number-1).to_a
-range.all? {|x| number % x != 0} &&
+
+ &&
 =end
 
 def prime?(number)
-  if number > 0
+  range = (2..number-1).to_a
+  if number > 0 && range.all? {|x| number % x != 0}
     return true
   else
     return false
